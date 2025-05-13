@@ -33,7 +33,7 @@ const projects = [
   {
     title: "SpendWise",
     description:
-      "Developed a finance tracker using MongoDB, ExpressJS, React, and NodeJS, incorporating transaction categorization and charts. Implementing auto-categorization of expenses from bank statements, boosting user efficiency by 40%.",
+      "Developing a finance tracker using MongoDB, ExpressJS, React, and NodeJS, incorporating transaction categorization and charts. Implementing auto-categorization of expenses from bank statements, boosting user efficiency by 40%. [Backend implementation in progress]",
     icon: <BarChart3 className="h-10 w-10 text-primary" />,
     skills: ["MongoDB", "Express.js", "React", "Node.js", "Data Visualization"],
     links: {
