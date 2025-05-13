@@ -16,8 +16,8 @@ export default function Home() {
           <Hero />
           <Education />
           <Experience />
-          <Projects />
           <Skills />
+          <Projects />
           <Contact />
         </main>
       </div>
