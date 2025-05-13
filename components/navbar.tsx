@@ -6,9 +6,11 @@ import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Menu, X } from "lucide-react"
 
+// Update the navigation items order
 const navItems = [
   { name: "Home", href: "#hero" },
   { name: "Education", href: "#education" },
+  { name: "Certifications", href: "#certifications" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
