@@ -26,7 +26,7 @@ const projects = [
     icon: <Code className="h-10 w-10 text-primary" />,
     skills: ["Linux", "Kernel Compilation", "System Configuration", "Bootloader"],
     links: {
-      github: "https://github.com/shreyanshrp/linux-from-scratch",
+      github: null,
       demo: null,
     },
   },
