@@ -63,7 +63,7 @@ export default function Navbar() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600"
             >
-              Shreyansh.dev
+              Shreyansh RP
             </motion.div>
 
             <nav className="hidden md:flex items-center space-x-1">
