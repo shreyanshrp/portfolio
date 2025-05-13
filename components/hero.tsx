@@ -217,7 +217,7 @@ export default function Hero() {
           variant="ghost"
           size="icon"
           className="rounded-full animate-bounce"
-          onClick={() => document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" })}
+          onClick={() => document.getElementById("certifications")?.scrollIntoView({ behavior: "smooth" })}
         >
           <ArrowDown />
           <span className="sr-only">Scroll Down</span>
