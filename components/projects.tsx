@@ -38,7 +38,7 @@ const projects = [
     skills: ["MongoDB", "Express.js", "React", "Node.js", "Data Visualization"],
     links: {
       github: "https://github.com/shreyanshrp/spendwise",
-      demo: "https://spendwise-demo.vercel.app",
+      demo: "https://spendwiseweb.vercel.app/",
     },
   },
   {
@@ -49,7 +49,7 @@ const projects = [
     skills: ["React", "Firebase", "Python", "scikit-learn", "Machine Learning", "Real-time Monitoring"],
     links: {
       github: "https://github.com/shreyanshrp/elevateme",
-      demo: "https://elevateme-demo.vercel.app",
+      demo: "https://elevateme.onrender.com/",
     },
   },
 ]

@@ -69,28 +69,24 @@ export default function Experience() {
         {/* Timeline line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-border"></div>
 
-        {experiences.map((exp, index) => (
+        {experiences.map((exp, idx) => (
           <motion.div
-            key={index}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+            key={idx}
+            initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.1 }}
+            transition={{ duration: 0.8, delay: idx * 0.1 }}
             viewport={{ once: true }}
             className={`relative mb-16 ${
-              index % 2 === 0 ? "md:pr-12 md:text-right md:ml-auto md:mr-1/2" : "md:pl-12 md:ml-1/2"
-            } md:w-1/2 z-10`}
+              idx % 2 === 0 ? "md:pr-16 md:text-left md:ml-auto md:mr-1/2" : "md:pl-16 md:ml-1/2"
+            } md:w-5/12 z-10`}
           >
-            <Card
-              className={`border-2 ${
-                index % 2 === 0 ? "md:mr-6" : "md:ml-6"
-              } hover:shadow-lg transition-shadow duration-300`}
-            >
-              <CardHeader className={index % 2 === 0 ? "md:text-right" : ""}>
-                <div className={`flex items-center gap-2 mb-2 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
+            <Card className={`border-2 hover:shadow-lg transition-shadow duration-300`}>
+              <CardHeader className={idx % 2 === 0 ? "md:text-left" : ""}>
+                <div className={`flex items-center gap-2 mb-2`}>
                   <Building className="h-5 w-5 text-primary" />
                   <CardTitle className="text-xl">{exp.title}</CardTitle>
                 </div>
-                <CardDescription className={`flex flex-col gap-1 ${index % 2 === 0 ? "md:items-end" : ""}`}>
+                <CardDescription className={`flex flex-col gap-1`}>
                   <span className="text-lg font-medium">{exp.company}</span>
                   <span className="flex items-center gap-1 text-sm">
                     <Calendar className="h-4 w-4" />
@@ -99,14 +95,14 @@ export default function Experience() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className={`space-y-2 mb-4 ${index % 2 === 0 ? "md:text-right" : ""}`}>
+                <ul className={`space-y-2 mb-4`}>
                   {exp.description.map((item, i) => (
                     <li key={i} className="text-sm text-muted-foreground">
                       {item}
                     </li>
                   ))}
                 </ul>
-                <div className={`flex flex-wrap gap-2 mt-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
+                <div className={`flex flex-wrap gap-2 mt-4`}>
                   {exp.skills.map((skill, i) => (
                     <Badge key={i} variant="secondary" className="rounded-full">
                       {skill}
@@ -117,7 +113,7 @@ export default function Experience() {
             </Card>
 
             {/* Timeline dot */}
-            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div>
+            {/*<div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary z-20 border-2 border-background"></div>*/}
           </motion.div>
         ))}
       </div>
