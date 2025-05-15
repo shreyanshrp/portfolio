@@ -14,6 +14,7 @@ const navItems = [
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
+  { name: "Nutanix Experience", href: "#nutanix-detailed" },
   { name: "Contact", href: "#contact" },
 ]
 
