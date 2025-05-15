@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Building, Calendar } from "lucide-react"
+import { DetailedExperienceDialog } from "./detailed-experience-dialog"
 
 const experiences = [
   {
@@ -16,6 +17,7 @@ const experiences = [
       "Contributed to an internal SaaS tool, developed 10+ components that improved workflow efficiency by 30% for Managers.",
     ],
     skills: ["Linux", "Networking", "VMware", "Nutanix HCI", "RCA", "SaaS"],
+    hasDetailedView: true,
   },
   {
     title: "React Development Trainee & UI/UX Design Intern",
@@ -109,11 +111,17 @@ export default function Experience() {
                     </Badge>
                   ))}
                 </div>
+
+                {exp.hasDetailedView && (
+                  <div className={`mt-6 ${idx % 2 === 0 ? "md:text-right" : ""}`}>
+                    <DetailedExperienceDialog />
+                  </div>
+                )}
               </CardContent>
             </Card>
 
             {/* Timeline dot */}
-            {/*<div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary z-20 border-2 border-background"></div>*/}
+            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary z-20 border-2 border-background"></div>
           </motion.div>
         ))}
       </div>
