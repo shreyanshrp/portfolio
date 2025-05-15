@@ -120,8 +120,8 @@ export default function Experience() {
               </CardContent>
             </Card>
 
-            {/* Timeline dot */}
-            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary z-20 border-2 border-background"></div>
+            {/* Timeline dot
+            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary z-20 border-2 border-background"></div> */}
           </motion.div>
         ))}
       </div>
