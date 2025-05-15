@@ -3,8 +3,8 @@
 import { motion } from "framer-motion"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Building, Calendar } from "lucide-react"
-import { DetailedExperienceDialog } from "./detailed-experience-dialog"
+import { Building, Calendar, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const experiences = [
   {
@@ -28,6 +28,7 @@ const experiences = [
       "Collaborated with the 6-member tech team to learn to implement designs, advancing my React skills.",
     ],
     skills: ["React", "UI/UX", "Figma", "Conversational AI"],
+    hasDetailedView: false,
   },
   {
     title: "Web Development Intern",
@@ -38,6 +39,7 @@ const experiences = [
       "Enhanced React proficiency through collaborative learning with 2 senior developers, completing project 20% ahead of schedule.",
     ],
     skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "React"],
+    hasDetailedView: false,
   },
   {
     title: "Secretary & Finance Head",
@@ -48,6 +50,7 @@ const experiences = [
       "Trained 40+ students and led financial operations, securing ₹1.2 lakhs in sponsorships and a ₹19k profit during Riviera 2024",
     ],
     skills: ["Leadership", "Financial Management", "Documentation", "Training"],
+    hasDetailedView: false,
   },
 ]
 
@@ -113,15 +116,24 @@ export default function Experience() {
                 </div>
 
                 {exp.hasDetailedView && (
-                  <div className={`mt-6 ${idx % 2 === 0 ? "md:text-right" : ""}`}>
-                    <DetailedExperienceDialog />
+                  <div className="mt-6 text-center">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="rounded-full"
+                      onClick={() => {
+                        document.getElementById("nutanix-detailed")?.scrollIntoView({ behavior: "smooth" })
+                      }}
+                    >
+                      Read Detailed Experience <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
                   </div>
                 )}
               </CardContent>
             </Card>
 
-            {/* Timeline dot
-            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary z-20 border-2 border-background"></div> */}
+            {/* Timeline dot 
+            <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary"></div> */}
           </motion.div>
         ))}
       </div>

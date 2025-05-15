@@ -7,6 +7,7 @@ import Contact from "@/components/contact"
 import Navbar from "@/components/navbar"
 import { ThemeProvider } from "@/components/theme-provider"
 import Certifications from "@/components/certifications"
+import DetailedExperience from "@/components/detailed-experience"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <Education />
           <Certifications />
           <Experience />
+          <DetailedExperience />
           <Projects />
           <Skills />
           <Contact />
