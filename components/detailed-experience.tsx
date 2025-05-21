@@ -3,8 +3,7 @@
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Server, Network, Terminal, Database, Cpu, Layers, ArrowUp } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Server, Network, Terminal, Database, Cpu, Layers } from "lucide-react"
 
 const modules = [
   {
@@ -76,7 +75,6 @@ export default function DetailedExperience() {
           viewport={{ once: true }}
           className="mb-12"
         >
-        
           <Card className="border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 bg-gradient-to-br from-background to-primary/5">
             <CardContent className="p-8">
               <p className="text-lg leading-relaxed">
@@ -201,17 +199,6 @@ export default function DetailedExperience() {
               </div>
             </CardContent>
           </Card>
-          
-          {/*<Button
-          variant="ghost"
-          size="icon"
-          className="rounded-full animate-bounce"
-          onClick={() => document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" })}
-          >
-          <ArrowUp />
-          <span className="sr-only">Scroll Up</span>
-          </Button>*/}
-        
         </motion.div>
       </div>
     </section>
