@@ -6,7 +6,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Server, Network, Terminal, Database, Cpu, Layers, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { useSearchParams } from "next/navigation"
 
 const modules = [
   {
@@ -55,24 +54,17 @@ const evaluations = [
 
 export function DetailedExperienceDialog() {
   const [open, setOpen] = useState(false)
-  const searchParams = useSearchParams()
-
-  // Check for the experience query parameter
-  useEffect(() => {
-    const experience = searchParams.get("experience")
-    if (experience === "nutanix") {
-      setOpen(true)
-    }
-  }, [searchParams])
 
   // Check for hash fragment
   useEffect(() => {
     const handleHashChange = () => {
-      if (window.location.hash === "#nutanix-detail") {
-        // Scroll to experience section
-        document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" })
-        // Open the modal
-        setOpen(true)
+      if (typeof window !== "undefined") {
+        if (window.location.hash === "#nutanix-detail") {
+          // Scroll to experience section
+          document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" })
+          // Open the modal
+          setOpen(true)
+        }
       }
     }
 
@@ -80,8 +72,12 @@ export function DetailedExperienceDialog() {
     handleHashChange()
 
     // Listen for hash changes
-    window.addEventListener("hashchange", handleHashChange)
-    return () => window.removeEventListener("hashchange", handleHashChange)
+    if (typeof window !== "undefined") {
+      window.addEventListener("hashchange", handleHashChange)
+      return () => window.removeEventListener("hashchange", handleHashChange)
+    }
+
+    return undefined
   }, [])
 
   return (
